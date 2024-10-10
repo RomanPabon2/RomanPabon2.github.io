@@ -1,0 +1,260 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f0f8ff; 
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenedor del formulario de inicio de sesion */
+.login-container {
+    width: 400px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 2px solid #003366; /* Borde azul */
+}
+
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos del footer */
+footer {
+    background-color: #003366; 
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    flex-shrink: 0;
+}
+
+/* Estilos del header */
+header {
+    background-color: #003366; 
+    color: white;
+    padding: 20px 0;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    padding: 0 20px;
+}
+
+.logo h1 {
+    font-size: 1.5em;
+    margin-left: 20px; 
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+/* Personalizacion de los botones */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #ffcc00;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links a:hover {
+    background-color: #c79300;
+}
+
+.btn-custom-yellow {
+    background-color: #f5b700; 
+}
+
+.btn-custom-yellow:hover {
+    background-color: #d4a100;
+}
+
+.navbar {
+    background-color: #003366; 
+    padding: 10px;
+}
+
+.navbar-brand {
+    color: #ffcc00; 
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: #fff; 
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffcc00; 
+}
+
+/* Estilos adicionales */
+.login-container h2 {
+    color: #003366; 
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    color: #003366; 
+    text-align: left;
+    width: 100%;
+}
+
+.form-control {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.btn-primary {
+    background-color: #003366; 
+    border: none;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #00264d; 
+}
+
+.btn-secondary {
+    background-color: #ffcc00; 
+    border: none;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #e6b800; 
+}
+
+.btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+
+/* Estilos para el menu hamburguesa en movil */
+.navbar-toggler {
+    border: none;
+    font-size: 1.5em; 
+}
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
+/* Ajustes para la caja de inicio de sesion */
+.login-container {
+    width: 90%; 
+    max-width: 400px;
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.5em;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    display: none; 
+}
+
+/* Estilos para moviles */
+@media (max-width: 767px) {
+    /* Ajustes en el contenedor */
+    .container {
+        padding: 10px;
+        box-shadow: none;
+        border-radius: 5px;
+    }
+
+    /* Ajustes en el header */
+    header {
+        padding: 10px 0;
+    }
+
+    .logo h1 {
+        font-size: 1.2em;
+        margin-left: 10px;
+    }
+
+    /* Estilos del menu de navegacion */
+    .nav-links {
+        display: block;
+        text-align: center; 
+        padding: 0;
+    }
+
+    .nav-links li {
+        display: block; 
+        margin-bottom: 10px; 
+    }
+
+    .nav-links a {
+        padding: 8px 12px;
+        font-size: 14px;
+        display: block; 
+        width: 100%;
+        text-align: center; 
+        margin: 0 auto;
+    }
+
+    /* Ajustes en los campos del formulario */
+    .form-control, .form-control-file {
+        width: 100%;
+    }
+
+    /* Ajustes en el boton */
+    .btn-primary {
+        width: 100%;
+        padding: 12px;
+    }
+
+    /* Ajustes en el footer */
+    footer {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    /* Ajustes en los titulos */
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
+

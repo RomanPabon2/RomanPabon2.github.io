@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión - Taller de Grado</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Archivo CSS externo -->
+    <link rel="stylesheet" href="inicio_sesion.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Barra de navegacion (Header) -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="logo">
+                <h1><a href="index.html">Taller de grado system</a></h1>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars" style="color: white;"></i> <!-- Icono de hamburguesa en blanco -->
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav-links ml-auto">
+                    <li><a href="#" class="btn btn-warning animate_animated animate_bounceIn"><i class="fas fa-info-circle"></i> Nosotros</a></li>
+                    <li><a href="enviar_formulario.html" class="btn btn-warning animate_animated animate_bounceIn"><i class="fas fa-paper-plane"></i> Enviar formulario</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido principal (Formulario de inicio de sesion) -->
+    <main>
+        <div class="login-container">
+            <h2>Iniciar Sesión</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Usuario:</label>
+                    <input type="text" class="form-control" id="username" placeholder="Ingrese su usuario" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-icon">
+                    <img src="https://img.icons8.com/color/48/000000/login-rounded-right.png" width="20" height="20" alt="icono">
+                    Iniciar Sesión
+                </button>
+                <br><br>
+                <button type="button" class="btn btn-secondary btn-icon">
+                    <img src="https://img.icons8.com/color/48/000000/teacher.png" width="20" height="20" alt="icono">
+                    Iniciar Sesión Docente
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Taller de Grado | Universidad Católica Boliviana</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Manejo de inicio de sesion
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Simulacion de validacion
+            if (username === "admin" && password === "1234") {
+                // Guardar en sessionStorage que el usuario ha iniciado sesion
+                sessionStorage.setItem("loggedIn", "true");
+
+                // Notificar al usuario
+                alert("Inicio de sesión exitoso");
+
+                // Redirigir al formulario 
+                window.location.href = "formulario.html"; 
+            } else {
+                alert("Credenciales incorrectas");
+            }
+        });
+    </script>
+</body>
+
+</html>

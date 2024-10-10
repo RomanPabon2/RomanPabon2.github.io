@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #003366; 
+    color: white;
+    padding: 20px 0;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    padding: 0 20px;
+}
+
+.logo h1 {
+    font-size: 1.5em;
+    margin-left: 20px; 
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+/* Personalizacion de los botones */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #ffcc00; 
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links a:hover {
+    background-color: #c79300;
+}
+
+.btn-custom-yellow {
+    background-color: #f5b700; 
+}
+
+.btn-custom-yellow:hover {
+    background-color: #d4a100;
+}
+
+/* Main styles */
+main {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    margin: 20px auto;
+    max-width: 900px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.requirements h2 {
+    color: #003366; 
+    margin-bottom: 10px;
+}
+
+.requirements p {
+    margin-bottom: 20px;
+}
+
+.form-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.form-section h3 {
+    color: #003366; 
+    margin-bottom: 10px;
+}
+
+form {
+    margin: 20px 0;
+}
+
+.form-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+form label {
+    display: block;
+    margin-right: 10px;
+    color: #003366;
+}
+
+form input {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #001f4d;
+}
+
+/* Footer */
+footer {
+    background-color: #003366; 
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+
+/* Estilos para el menu hamburguesa en movil */
+.navbar-toggler {
+    border: none;
+    font-size: 1.5em; /* Tamaño del icono de hamburguesa */
+}
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    display: none; /* Ocultar el fondo por defecto */
+}
+
+/* Estilos para moviles */
+@media (max-width: 767px) {
+    /* Ajustes en el contenedor */
+    .container {
+        padding: 10px;
+        box-shadow: none;
+        border-radius: 5px;
+    }
+
+    /* Ajustes en el header */
+    header {
+        padding: 10px 0;
+    }
+
+    .logo h1 {
+        font-size: 1.2em;
+        margin-left: 10px;
+    }
+
+    /* Estilos del menu de navegacion */
+    .nav-links {
+        display: block;
+        text-align: center; 
+        padding: 0;
+    }
+
+    .nav-links li {
+        display: block; 
+        margin-bottom: 10px; 
+    }
+
+    .nav-links a {
+        padding: 8px 12px;
+        font-size: 14px;
+        display: block; 
+        width: 100%;
+        text-align: center; 
+        margin: 0 auto;
+    }
+
+    /* Ajustes en los campos del formulario */
+    .form-control, .form-control-file {
+        width: 100%;
+    }
+
+    /* Ajustes en el boton */
+    .btn-primary {
+        width: 100%;
+        padding: 12px;
+    }
+
+    /* Ajustes en el footer */
+    footer {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    /* Ajustes en los titulos */
+    h2 {
+        font-size: 1.5em;
+    }
+}
+

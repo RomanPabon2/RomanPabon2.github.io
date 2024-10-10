@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Académico - Taller de Grado</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Archivo CSS externo -->
+    <link rel="stylesheet" href="enviar_formulario.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Barra de navegacion (Header) -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="logo">
+                <h1><a href="index.html">Taller de grado system</a></h1>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars" style="color: white;"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav-links ml-auto">
+                    <li><a href="#" class="btn btn-warning animate_animated animate_bounceIn"><i class="fas fa-info-circle"></i> Nosotros</a></li>
+                    <li><a href="inicio_sesion.html" class="btn btn-custom-yellow animate_animated animate_bounceIn"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido principal (Formulario Proyecto Academico) -->
+    <main>
+        <div class="container mt-5">
+            <h2>Requisitos Taller de grado I - Proyecto Académico</h2>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="proyecto-tab" data-toggle="tab" href="#proyecto" role="tab" aria-controls="proyecto" aria-selected="true">Proyecto académico</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="trabajo-dirigido-tab" data-toggle="tab" href="#trabajo-dirigido" role="tab" aria-controls="trabajo-dirigido" aria-selected="false">Trabajo dirigido</a>
+                </li>
+            </ul>
+            <div class="tab-content mt-3">
+                <!-- Proyecto academico -->
+                <div class="tab-pane fade show active" id="proyecto" role="tabpanel" aria-labelledby="proyecto-tab">
+                    <form>
+                        <div class="form-group">
+                            <label for="docID">Nro Documento de Identidad:</label>
+                            <input type="text" class="form-control" id="docID" placeholder="Ingrese su número de documento" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nombre">Nombres:</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="apellidoPaterno">Apellido Paterno:</label>
+                            <input type="text" class="form-control" id="apellidoPaterno" placeholder="Ingrese su apellido paterno" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="apellidoMaterno">Apellido Materno:</label>
+                            <input type="text" class="form-control" id="apellidoMaterno" placeholder="Ingrese su apellido materno" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="categoria">Categoría:</label>
+                            <select class="form-control" id="categoria">
+                                <option value="">- NINGUNA -</option>
+                                <option value="1">Categoría 1</option>
+                                <option value="2">Categoría 2</option>
+                                <option value="3">Categoría 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="carta">Carta (subir pdf):</label>
+                            <input type="file" class="form-control-file" id="carta" accept="application/pdf">
+                        </div>
+                        <div class="form-group">
+                            <label for="detallePropuesta">Detalle propuesta (subir pdf):</label>
+                            <input type="file" class="form-control-file" id="detallePropuesta" accept="application/pdf">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+                <!-- Trabajo dirigido -->
+                <div class="tab-pane fade" id="trabajo-dirigido" role="tabpanel" aria-labelledby="trabajo-dirigido-tab">
+                    <form>
+                        <div class="form-group">
+                            <label for="docIDTrabajo">Nro Documento de Identidad:</label>
+                            <input type="text" class="form-control" id="docIDTrabajo" placeholder="Ingrese su número de documento" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nombreTrabajo">Nombres:</label>
+                            <input type="text" class="form-control" id="nombreTrabajo" placeholder="Ingrese su nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="apellidoPaternoTrabajo">Apellido Paterno:</label>
+                            <input type="text" class="form-control" id="apellidoPaternoTrabajo" placeholder="Ingrese su apellido paterno" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="apellidoMaternoTrabajo">Apellido Materno:</label>
+                            <input type="text" class="form-control" id="apellidoMaternoTrabajo" placeholder="Ingrese su apellido materno" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="docuTrabajo">Trabajo Dirigido (subir pdf):</label>
+                            <input type="file" class="form-control-file" id="docuTrabajo" accept="application/pdf">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Trabajo Dirigido</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Taller de Grado | Universidad Católica Boliviana</p>
+    </footer>
+
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
